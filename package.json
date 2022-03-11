@@ -1,0 +1,8 @@
+{
+    "name": "CurrencyConverter-AVAX-USD-using-chainlink",
+    "version": "0.0.1",
+    "engines": {
+      "node": "14.17.x",
+      "npm": "6.14.x"
+    }
+  }
