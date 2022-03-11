@@ -15,12 +15,12 @@ contract ConvertCurrency {
 
     function getCurrentPrice() public view returns (uint) {
         (, int256  _price, , , ) = priceFeed.latestRoundData();
-        return uint(_price);
+        return uint(_price).div(uint(10 ** 8));
     }
 
     function convertCurrency(uint _usdA) public view returns (uint) {
         (, int256  _price, , , ) = priceFeed.latestRoundData();
-        uint avaxA = _usdA.div(uint(_price));
+        uint avaxA = _usdA.mul(10 ** 18).div(uint(_price));
         return avaxA;
     }
 }
